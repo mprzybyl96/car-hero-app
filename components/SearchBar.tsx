@@ -8,7 +8,7 @@ const SearchBar = () => {
   const [manufacturer, setManufacturer] = useState("");
 
   return (
-    <form className="searchBar" onSubmit={handleSearch}>
+    <form className="searchBar w-full" onSubmit={handleSearch}>
       <div className="searchbar_item">
         <SearchManufacturer
           manufacturer={manufacturer}
