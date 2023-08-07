@@ -39,3 +39,11 @@ export interface ICarDetails {
   closeModal: () => void;
   isOpen: boolean;
 }
+
+export interface IFilters {
+  manufacturer: string;
+  model: string;
+  year: number;
+  fuel: string;
+  limit: number;
+}
