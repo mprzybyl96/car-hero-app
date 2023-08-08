@@ -57,3 +57,8 @@ export interface ICustomFilter {
   title: string;
   options: IFilterOptions[];
 }
+
+export interface IShowMoreCars {
+  pageNumber: number;
+  isNext: boolean;
+}
