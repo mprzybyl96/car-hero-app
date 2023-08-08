@@ -1,4 +1,6 @@
 import { ICar, IFilters } from "@/types";
+import { useRouter } from "next/navigation";
+import { type } from "os";
 
 export const fetchCars = async (filters: IFilters) => {
   const headers = {
@@ -31,6 +33,13 @@ export const generateCarImageUrl = (car: ICar, angle?: string) => {
   url.searchParams.append("angle", `${angle}`);
   console.log(url);
   return `${url}`;
+};
+
+export const updateSearchParams = (type: string, value: string) => {
+  const searchParams = new URLSearchParams(window.location.search);
+  searchParams.set(type, value);
+  const newPathName = `${window.location.pathname}?${searchParams.toString()}`;
+  return newPathName;
 };
 
 export const calculateCarRent = (city_mpg: number, year: number) => {

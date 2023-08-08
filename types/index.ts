@@ -47,3 +47,13 @@ export interface IFilters {
   fuel: string;
   limit: number;
 }
+
+export interface IFilterOptions {
+  title: string;
+  value: string;
+}
+
+export interface ICustomFilter {
+  title: string;
+  options: IFilterOptions[];
+}
